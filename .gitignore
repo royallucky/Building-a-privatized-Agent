@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.pyo
+venv/
+env/
+*.env
+
+
+/data/
+/LLM/*.png
+*.log
+
+data_agent_architecture_full.png
+rag_agent_advanced.png

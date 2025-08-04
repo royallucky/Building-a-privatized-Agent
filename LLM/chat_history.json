@@ -1,0 +1,18 @@
+[
+  {
+    "type": "human",
+    "content": "我要一个原始的缺陷趋势数据"
+  },
+  {
+    "type": "ai",
+    "content": "\n    json\n    [\n      {\n        \"id\": 1,\n        \"tool_name\": \"load_data\",\n        \"description\": \"加载A产品检测数据\",\n        \"type\": \"serial\"\n      },\n      {\n        \"id\": 2,\n        \"tool_name\": \"run_model\",\n        \"description\": \"运行缺陷检测模型\",\n        \"type\": \"serial\"\n      }\n    ]\n\n    是否需要添加报表功能？"
+  },
+  {
+    "type": "human",
+    "content": "请把非法数据清洗掉、并且给我生成趋势图和报告"
+  },
+  {
+    "type": "ai",
+    "content": "根据对话历史、中间状态和当前已生成任务规划，调整任务规划如下：\n\n1. 加载非法数据清洗步骤：由于用户要求清洗掉非法数据，因此需要在“load_data”步骤之后添加一个“clean_data”步骤。\n2. 生成趋势图和报告：用户要求生成趋势图和报告，因此需要在“run_model”步骤之后添加两个新步骤：“draw_trend”和“draw_distribution”。\n\n完成调整后的最新完整任务规划如下：\n\n```json\n[\n  {\n    \"id\": 1,\n    \"tool_name\": \"load_data\",\n    \"description\": \"加载A产品检测数据\",\n    \"type\": \"serial\"\n  },\n  {\n    \"id\": 2,\n    \"tool_name\": \"clean_data\",\n    \"description\": \"清洗非法数据\",\n    \"type\": \"parallel\"\n  },\n  {\n    \"id\": 3,\n    \"tool_name\": \"run_model\",\n    \"description\": \"运行缺陷检测模型\",\n    \"type\": \"serial\"\n  },\n  {\n    \"id\": 4,\n    \"tool_name\": \"draw_trend\",\n    \"description\": \"生成趋势图\",\n    \"type\": \"parallel\"\n  },\n  {\n    \"id\": 5,\n    \"tool_name\": \"draw_distribution\",\n    \"description\": \"生成分布图\",\n    \"type\": \"parallel\"\n  }\n]\n```\n\n注意：由于用户要求清洗掉非法数据，因此需要在“load_data”步骤之后添加一个“clean_data”步骤。同时，需要在“run_model”步骤之后添加两个新步骤：“draw_trend”和“draw_distribution”。"
+  }
+]

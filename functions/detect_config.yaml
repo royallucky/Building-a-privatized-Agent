@@ -1,0 +1,28 @@
+# DetectAgent 异常识别配置
+# 每条规则包含两个部分：
+#   - if：在 simple_eval 中可识别的条件表达式
+#   - then：当条件成立时，需要写入到 record 中的异常标记和详情
+
+mode: "rule"        # 可选 "rule"（只用规则）或 "model"（优先模型，再降级规则）
+model_path: "path/to/model.pkl"  # 当 mode 为 model 时加载的模型文件（使用时替换为自己的实际模型文件）
+
+rules:
+  # 当 temperature（温度） 大于 75摄氏度 时，标记为“高温异常”
+  - if: "temperature > 75"
+    then:
+      anomaly_type: "高温异常"
+      score: 0.9       # 置信度示例
+
+  # 当 pressure（压力） 小于 0.2 时，标记为“低压异常”
+  - if: "pressure < 0.2"
+    then:
+      anomaly_type: "低压异常"
+      score: 0.8
+
+  # 当 status（设备状态码） 字段不等于 "OK" 时，标记为“状态异常”
+  - if: "status != 'OK'"
+    then:
+      anomaly_type: "状态异常"
+      score: 1.0
+
+# 其他条件请基于上述示例按需补充

@@ -1,0 +1,14 @@
+{
+  "load_data": {
+    "name": "load_data",
+    "description": "加载数据"
+  },
+  "clean_data": {
+    "name": "clean_data",
+    "description": "清洗数据"
+  },
+  "run_model": {
+    "name": "run_model",
+    "description": "对清洗后的数据进行模型推理"
+  }
+}

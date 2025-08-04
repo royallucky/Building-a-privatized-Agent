@@ -1,0 +1,7 @@
+Task ID,Type,Status,Retries,Start,End,Output
+fa467ca3-600d-41b5-a03a-58a6f8f06eba,clean_data,success,0,2025-07-29 21:07:42.789963,2025-07-29 21:07:44.608716,DataCleaningAgent 处理完成输出
+9a5bccce-cf40-44f9-adc7-050bc11739b8,analyze_data,success,0,2025-07-29 21:07:44.681764,2025-07-29 21:07:46.680687,DataAnalysisAgent 处理完成输出
+76e80807-1a96-49d0-b4d4-0c85773ab3a7,generate_report,failed,2,2025-07-29 21:07:52.789545,2025-07-29 21:07:56.822116,
+fa467ca3-600d-41b5-a03a-58a6f8f06eba,clean_data,success,0,2025-07-29 21:07:42.789963,2025-07-29 21:07:44.608716,DataCleaningAgent 处理完成输出
+9a5bccce-cf40-44f9-adc7-050bc11739b8,analyze_data,success,0,2025-07-29 21:07:44.681764,2025-07-29 21:07:46.680687,DataAnalysisAgent 处理完成输出
+76e80807-1a96-49d0-b4d4-0c85773ab3a7,generate_report,failed,2,2025-07-29 21:07:52.789545,2025-07-29 21:07:56.822116,

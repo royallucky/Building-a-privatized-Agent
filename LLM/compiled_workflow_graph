@@ -1,0 +1,16 @@
+// LangGraph Compiled Workflow
+digraph {
+	fontname="微软雅黑" rankdir=LR size="10,5"
+	__start__ [label=__start__ fillcolor="#D9D9D9" fontname="微软雅黑" shape=box style=filled]
+	t1 [label=t1 fillcolor="#D9D9D9" fontname="微软雅黑" shape=box style=filled]
+	t2 [label=t2 fillcolor="#D9D9D9" fontname="微软雅黑" shape=box style=filled]
+	t3 [label=t3 fillcolor="#D9D9D9" fontname="微软雅黑" shape=box style=filled]
+	t4 [label=t4 fillcolor="#D9D9D9" fontname="微软雅黑" shape=box style=filled]
+	start [label=start fillcolor="#B4C6E7" fontname="微软雅黑" shape=doublecircle style=filled]
+	dispatch_tasks [label=dispatch_tasks fillcolor="#FFE699" fontname="微软雅黑" shape=ellipse style=filled]
+	refresh_pending_tasks [label=refresh_pending_tasks fillcolor="#C6E0B4" fontname="微软雅黑" shape=ellipse style=filled]
+	__end__ [label=__end__ fillcolor="#F4B084" fontname="微软雅黑" shape=Msquare style=filled]
+	__start__ -> start
+	start -> dispatch_tasks
+	dispatch_tasks -> __end__
+}

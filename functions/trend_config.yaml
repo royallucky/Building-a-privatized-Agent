@@ -1,0 +1,7 @@
+# 需要计算滑动趋势的字段列表
+fields:
+  - yield           # 良率
+  - temperature     # 环境温度
+  - anomaly_rate    # 异常率
+# 时间戳字段名
+date_field: timestamp

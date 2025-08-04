@@ -1,0 +1,11 @@
+// DAG执行流程
+digraph {
+	t1 [label="t1\nclean_data"]
+	t2 [label="t2\nanalyze_data"]
+	t3 [label="t3\ngenerate_report"]
+	t4 [label="t4\nsend_report"]
+	t1 -> t2
+	t1 -> t3
+	t2 -> t4
+	t3 -> t4
+}

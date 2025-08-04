@@ -1,0 +1,35 @@
+# 日报报告 — 批次 {{ batch_id }}
+
+**生成时间**：{{ now }}
+
+## 一、数据概览
+
+* 原始记录数：{{ stats.raw_count }}
+* 清洗后记录数：{{ stats.cleaned_count }}
+* 异常总数：{{ stats.anomaly_count }}
+
+## 二、异常分布
+
+| 异常类型                                       |               数量 |
+| ------------------------------------------ | ---------------: |
+| {% for item in stats.anomaly_breakdown %} |                  |
+| {{ item.type }}                            | {{ item.count }} |
+| {% endfor %}                               |                  |
+
+## 三、趋势分析
+
+```html
+<div id="trend-chart" style="width:800px;height:400px;"></div>
+<script>
+var chart = echarts.init(document.getElementById('trend-chart'));
+chart.setOption({{ trend_option | safe }});
+</script>
+```
+
+## 四、静态图表
+
+![趋势图]({{ chart_path }})
+
+---
+
+*以上报告由 ReportAgent 自动生成。*

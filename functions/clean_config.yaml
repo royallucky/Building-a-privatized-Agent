@@ -1,0 +1,11 @@
+fields:
+  temperature:
+    rename_from: "temp_raw"
+    fillna: 25.0
+    clip: [0, 100]
+  pressure:
+    fillna: 1.0
+    multiply: 0.001
+    clip: [0, 5]
+  status:
+    fillna: "OK"
